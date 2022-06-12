@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "141161948182",
+    "project_id": "mathmax-474b6",
+    "storage_bucket": "mathmax-474b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:141161948182:android:d49d56ea52a6a696d84137",
+        "android_client_info": {
+          "package_name": "com.example.mathmax"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "141161948182-r4tifct2v701h50n18s911j0kva8tin7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrCZ2wMavGe_QysDzhNCX4W7A9cMBNKN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "141161948182-r4tifct2v701h50n18s911j0kva8tin7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
