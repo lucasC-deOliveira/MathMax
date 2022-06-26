@@ -46,6 +46,37 @@
             android:name=".SobreActivity"
             android:exported="false" />
         <activity
+            android:name=".Potenciacao"
+            android:exported="false" />
+
+        <activity
+            android:name=".figuras.QuadradoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".figuras.RetanguloActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".figuras.TrianguloActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".figuras.LosangoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".figuras.TrapezioActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".figuras.CirculoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".figuras.CirculoComprimentoActivity"
+            android:exported="false" />
+        <activity
             android:name=".Spreech"
             android:exported="true">
             <intent-filter>
