@@ -68,6 +68,7 @@
         android:id="@+id/textView3"
         android:layout_width="299dp"
         android:layout_height="149dp"
+        android:layout_marginTop="208dp"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
         android:text="O MathMax tem por objetivo  contribuir no aprendizado e desenvolvimento de turmas do ensino fundamental, auxiliando alunos na resolução de cálculos matemáticos focados em determinados assuntos."
@@ -75,17 +76,17 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.373" />
+        app:layout_constraintVertical_bias="0.166" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="292dp"
         android:layout_height="117dp"
+        android:layout_marginTop="440dp"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
         android:text="Inicialmente desenvolvido pelo Projeto de Startup dos Cursos de TI do Centro Universitário Planalto Central Apparecido dos Santos."
@@ -93,12 +94,12 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.703" />
+        app:layout_constraintVertical_bias="0.373" />
 
     <ImageView
         android:id="@+id/imageView3"
