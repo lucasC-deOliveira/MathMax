@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +21,8 @@ public class CalculadoraRadiciacaoActivity extends AppCompatActivity {
     private TextView passos, resultado;
 
     private int numberRaiz = 0, numberRadicando = 0;
+
+    private ImageView btBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,8 @@ public class CalculadoraRadiciacaoActivity extends AppCompatActivity {
         passos.setText("\n\n\n\n\n\n");
 
         resultado = findViewById(R.id.textResultado);
+
+        btBack = findViewById(R.id.btBackRadiciacao);
 
 
     }
@@ -92,6 +97,13 @@ public class CalculadoraRadiciacaoActivity extends AppCompatActivity {
                     return false;
                 }
             });
+
+        btBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
     }
 

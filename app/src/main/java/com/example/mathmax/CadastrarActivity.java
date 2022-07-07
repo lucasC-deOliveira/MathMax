@@ -64,11 +64,11 @@ public class CadastrarActivity extends AppCompatActivity {
                                 try {
                                     throw task.getException();
                                 } catch(FirebaseAuthWeakPasswordException e) {
-                                    Toast.makeText(getApplicationContext(),"Senha fraca!",Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(),"A senha digitada é fraca.",Toast.LENGTH_LONG).show();
                                 } catch(FirebaseAuthInvalidCredentialsException e) {
-                                    Toast.makeText(getApplicationContext(),"Email ou senha invalidos!",Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(),"E-mail ou senha inválidos!",Toast.LENGTH_LONG).show();
                                 } catch(FirebaseAuthUserCollisionException e) {
-                                    Toast.makeText(getApplicationContext(),"Usuario com este email ja existe!",Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(),"Já existe um usuário com este E-mail.",Toast.LENGTH_LONG).show();
                                 } catch(Exception e) {
                                     Log.e("ErroCadastro", e.getMessage());
                                 }
@@ -78,22 +78,22 @@ public class CadastrarActivity extends AppCompatActivity {
                 }
 
                 else if(email.equals("")  && !nome.equals("") ){
-                    Toast.makeText(getApplicationContext(),"Preencha o email",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Por favor, informe seu E-mail.",Toast.LENGTH_LONG).show();
                 }
 
                 else if(!senha.equals(senhaConfirmacao) && !email.equals("")  &&  !nome.equals("")  && !senha.equals("") && !senhaConfirmacao.equals("")){
-                    Toast.makeText(getApplicationContext(),"As senhas devem ser identicas",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"As senhas devem ser idênticas.",Toast.LENGTH_LONG).show();
                 }
 
                 else if(nome.equals("")){
-                    Toast.makeText(getApplicationContext(),"Informe o seu nome",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Por favor, informe seu nome.",Toast.LENGTH_LONG).show();
                 }
                 else if(senha.equals("") && !email.equals("") && !nome.equals("") ){
-                    Toast.makeText(getApplicationContext(),"Preencha a senha",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Por favor, informe sua senha.",Toast.LENGTH_LONG).show();
                 }
 
                 else if(senhaConfirmacao.equals("") && !email.equals("")  && !nome.equals("") && !senha.equals("")){
-                    Toast.makeText(getApplicationContext(),"Preencha a confirmação de senha",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Por favor, informe a confirmação de senha.",Toast.LENGTH_LONG).show();
                 }
 
 
@@ -105,9 +105,7 @@ public class CadastrarActivity extends AppCompatActivity {
         btBackCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent back = new Intent(getApplicationContext(), LoginMenuActivity.class);
-                startActivity(back);
-                finish();
+                onBackPressed();
             }
         });
     }
@@ -115,6 +113,13 @@ public class CadastrarActivity extends AppCompatActivity {
     private void goToApp(){
         Intent main = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(main);
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent back = new Intent(getApplicationContext(), LoginMenuActivity.class);
+        startActivity(back);
         finish();
     }
 }

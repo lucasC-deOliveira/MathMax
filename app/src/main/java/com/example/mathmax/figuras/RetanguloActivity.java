@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,8 @@ public class RetanguloActivity extends AppCompatActivity implements FigurasPlana
 
     private Button btnCalcular;
 
+    private ImageView btBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +35,7 @@ public class RetanguloActivity extends AppCompatActivity implements FigurasPlana
         formula = findViewById(R.id.txtViewFormula);
         passo1 = findViewById(R.id.txtViewPasso1);
         btnCalcular = findViewById(R.id.btnCalcular);
+        btBack = findViewById(R.id.btBackRetangulo);
 
     }
 
@@ -54,6 +58,13 @@ public class RetanguloActivity extends AppCompatActivity implements FigurasPlana
 
         });
 
+        btBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
     }
 
     @Override
@@ -61,11 +72,11 @@ public class RetanguloActivity extends AppCompatActivity implements FigurasPlana
         base = Double.parseDouble(valor1.getText().toString());
         altura = Double.parseDouble(valor2.getText().toString());
         resultado = base * altura;
-        resultadov.setText(String.valueOf(resultado));
+        resultadov.setText(String.format("%.3f", resultado));
 
-        formula.setText(base + " x " + altura);
+        formula.setText(String.format("%.3f", base) + " x " + String.format("%.3f", altura));
 
-        passo1.setText(String.valueOf(resultado));
+        passo1.setText(String.format("%.3f", resultado));
 
     }
     @Override

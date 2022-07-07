@@ -24,6 +24,8 @@
         <item>Área do Triângulo</item>
         <item>Área do Losângulo</item>
         <item>Área do Trapézio</item>
+        <item>Área do Circulo</item>
+        <item>Comprimento do Circulo</item>
 
         <item>Potenciação</item>
     </string-array>

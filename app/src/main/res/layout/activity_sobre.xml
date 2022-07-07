@@ -7,7 +7,7 @@
     tools:context=".SobreActivity">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/btBackSobre"
         android:layout_width="20dp"
         android:layout_height="20dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
@@ -20,8 +20,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="321dp"
-        android:layout_height="467dp"
+        android:layout_width="344dp"
+        android:layout_height="514dp"
         android:background="@color/grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,21 +31,21 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="172dp"
-        android:layout_height="26dp"
+        android:layout_width="223dp"
+        android:layout_height="43dp"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
         android:text="Sobre"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.42" />
+        app:layout_constraintVertical_bias="0.582" />
 
     <TextView
         android:id="@+id/textView2"
@@ -66,36 +66,39 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="296dp"
-        android:layout_height="133dp"
+        android:layout_width="299dp"
+        android:layout_height="149dp"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
-        android:text="O MathMax tem por objetivo  contribuir no aprendizado e desenvolvimento de turmas, auxiliando alunos na resolução de cáculos matemáticos focados em determinados assuntos."
+        android:text="O MathMax tem por objetivo  contribuir no aprendizado e desenvolvimento de turmas do ensino fundamental, auxiliando alunos na resolução de cálculos matemáticos focados em determinados assuntos."
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.464" />
+        app:layout_constraintVertical_bias="0.373" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="295dp"
-        android:layout_height="85dp"
+        android:layout_width="292dp"
+        android:layout_height="117dp"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
-        android:text="Incialmente desenvolvido pelo Centro Universitário o Planalto Central Apparecido dos Santos."
+        android:text="Inicialmente desenvolvido pelo Projeto de Startup dos Cursos de TI do Centro Universitário Planalto Central Apparecido dos Santos."
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.674" />
+        app:layout_constraintVertical_bias="0.703" />
 
     <ImageView
         android:id="@+id/imageView3"

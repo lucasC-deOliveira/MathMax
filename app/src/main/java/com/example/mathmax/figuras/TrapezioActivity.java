@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +21,8 @@ public class TrapezioActivity extends AppCompatActivity implements FigurasPlanas
 
     private Button btnCalcular;
 
+    private ImageView btBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +37,7 @@ public class TrapezioActivity extends AppCompatActivity implements FigurasPlanas
         passo2 = findViewById(R.id.txtViewPasso2);
         passo3 = findViewById(R.id.txtViewPasso3);
         btnCalcular = findViewById(R.id.btnCalcular);
+        btBack = findViewById(R.id.btBackTrapezio);
 
     }
 
@@ -58,6 +62,13 @@ public class TrapezioActivity extends AppCompatActivity implements FigurasPlanas
 
         });
 
+        btBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
     }
 
     @Override
@@ -66,21 +77,21 @@ public class TrapezioActivity extends AppCompatActivity implements FigurasPlanas
         baseMenor = Double.parseDouble(valor2.getText().toString());
         altura = Double.parseDouble(valor3.getText().toString());
         resultado = ((baseMaior + baseMenor) * altura) / 2;
-        resultadov.setText(String.valueOf(resultado));
+        resultadov.setText(String.format("%.3f", resultado));
 
-        formula.setText("((" + baseMaior + " + " + baseMenor + ") * " + altura + ")" + "/ 2");
+        formula.setText("((" + String.format("%.3f", baseMaior) + " + " + String.format("%.3f", baseMenor) + ") x " + String.format("%.3f", altura) + ")" + "/2");
 
         soma = baseMaior + baseMenor;
 
-        passo1.setText("(" + soma + " * " + altura + ")" + "/ 2");
+        passo1.setText("(" + String.format("%.3f", soma) + " x " + String.format("%.3f", altura) + ")" + "/2");
 
         multiplicacao = soma * altura;
 
-        passo2.setText(multiplicacao + "/ 2");
+        passo2.setText(String.format("%.3f", multiplicacao) + "/2");
 
         divisao = multiplicacao / 2;
 
-        passo3.setText(String.valueOf(divisao));
+        passo3.setText(String.format("%.3f", divisao));
     }
 
     @Override

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +21,9 @@ public class LosangoActivity extends AppCompatActivity implements FigurasPlanas{
 
     private Button btnCalcular;
 
+    private ImageView btBack;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,7 @@ public class LosangoActivity extends AppCompatActivity implements FigurasPlanas{
         passo1 = findViewById(R.id.txtViewPasso1);
         passo2 = findViewById(R.id.txtViewPasso2);
         btnCalcular = findViewById(R.id.btnCalcular);
+        btBack = findViewById(R.id.btBackLosangulo);
 
     }
 
@@ -54,6 +59,13 @@ public class LosangoActivity extends AppCompatActivity implements FigurasPlanas{
 
         });
 
+        btBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
     }
 
     @Override
@@ -61,17 +73,17 @@ public class LosangoActivity extends AppCompatActivity implements FigurasPlanas{
         diagonalMaior = Double.parseDouble(valor1.getText().toString());
         diagonalMenor = Double.parseDouble(valor2.getText().toString());
         resultado = (diagonalMaior * diagonalMenor) / 2;
-        resultadov.setText(String.valueOf(resultado));
+        resultadov.setText(String.format("%.3f", resultado));
 
-        formula.setText("(" + diagonalMaior + " x " + diagonalMenor + ")" + "/ 2");
+        formula.setText("(" + String.format("%.3f", diagonalMaior) + " x " + String.format("%.3f", diagonalMenor) + ")" + "/2");
 
         multiplicacao = diagonalMaior * diagonalMenor;
 
-        passo1.setText(multiplicacao + "/ 2");
+        passo1.setText(String.format("%.3f", multiplicacao) + "/2");
 
         divisao = multiplicacao / 2;
 
-        passo2.setText(String.valueOf(divisao));
+        passo2.setText(String.format("%.3f", divisao));
     }
 
 

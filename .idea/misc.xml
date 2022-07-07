@@ -3,20 +3,41 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1935" />
         <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/drawable/border_button.xml" value="0.3095" />
         <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/drawable/btn_borda_arredondada.xml" value="0.3095" />
         <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3095" />
         <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/drawable/input_border.xml" value="0.3095" />
-        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_cadastrar.xml" value="0.37395833333333334" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_cadastrar.xml" value="0.33" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_calculador_perimetro_losangulo.xml" value="0.29739583333333336" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_calculadora.xml" value="0.3625" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_calculadora_perimetro_quadrado_actvity.xml" value="0.3625" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_calculadora_perimetro_retangulo.xml" value="0.3625" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_calculadora_perimetro_trapezio.xml" value="0.33" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_calculadora_perimetro_triangulo_activity.xml" value="0.33" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_calculadora_radiciacao.xml" value="0.33" />
         <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_calculo.xml" value="0.37395833333333334" />
-        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_dados.xml" value="0.5" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_circulo_area.xml" value="0.33" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_circulo_comprimento.xml" value="0.33" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_dados.xml" value="0.33" />
         <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_dados_cadastrados.xml" value="0.37395833333333334" />
-        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_login.xml" value="0.37395833333333334" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_login_menu.xml" value="0.37395833333333334" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_losango.xml" value="0.33" />
         <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_sobre.xml" value="0.37395833333333334" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_potenciacao.xml" value="0.33" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_quadrado.xml" value="0.33" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_retangulo.xml" value="0.33" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_sobre.xml" value="0.33" />
         <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_sprech.xml" value="0.37395833333333334" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_trapezio.xml" value="0.33" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/activity_triangulo.xml" value="0.33" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/spinner_dropdown_item.xml" value="0.29739583333333336" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/layout/spinner_item.xml" value="0.29739583333333336" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/mipmap-anydpi-v26/MathMax.xml" value="0.201" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/mipmap-anydpi-v26/MathMax_round.xml" value="0.1935" />
         <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3095" />
+        <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/mipmap-anydpi-v26/ic_launcher_mathmax.xml" value="0.1935" />
         <entry key="..\:/Users/Pedrokszzz/StudioProjects/MathMax/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3095" />
         <entry key="..\:/Users/lucas/AndroidStudioProjects/MathMax/app/src/main/res/drawable/border_button.xml" value="0.2255" />
         <entry key="..\:/Users/lucas/AndroidStudioProjects/MathMax/app/src/main/res/drawable/input_border.xml" value="0.332" />

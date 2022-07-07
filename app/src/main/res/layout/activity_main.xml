@@ -70,6 +70,7 @@
         android:layout_marginTop="65dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="@color/black"
+        android:textColor="@color/white"
         android:paddingEnd="40dp"
         android:text="Calculadora"
         app:icon="@drawable/calculadora_icon"
@@ -82,45 +83,25 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="240dp"
-        android:backgroundTint="@color/black"
-        android:paddingEnd="40dp"
-        android:text="passo a passo"
-        android:textAlignment="center"
-        app:icon="@drawable/fx_icon"
-        app:iconGravity="start"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btCalcMain"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
         android:id="@+id/sobrebutton"
         android:layout_width="0dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="232dp"
         android:backgroundTint="@color/black"
         android:paddingEnd="40dp"
         android:text="sobre"
         android:textAlignment="center"
+        android:textColor="@color/white"
         app:icon="@drawable/about_icon"
         app:iconGravity="start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/btCalcMain"
+        app:layout_constraintVertical_bias="0.363" />
 
     <Button
         android:id="@+id/btSair"
@@ -129,6 +110,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="@color/black"
+        android:textColor="@color/white"
         android:text="sair"
         android:textAlignment="center"
         app:iconGravity="start"

@@ -1,10 +1,12 @@
 package com.example.mathmax;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +24,8 @@ public class Potenciacao extends AppCompatActivity {
 
     private Button btnCalcular;
 
+    private ImageView btBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,7 @@ public class Potenciacao extends AppCompatActivity {
         resultadov = findViewById(R.id.editResultado);
         passos = findViewById(R.id.txtViewPassos);
         btnCalcular = findViewById(R.id.btnCalcular);
+        btBack = findViewById(R.id.btBackPotenciacao);
 
     }
 
@@ -54,6 +59,13 @@ public class Potenciacao extends AppCompatActivity {
 
         });
 
+        btBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
     }
 
     public void potenciar() {
@@ -66,7 +78,7 @@ public class Potenciacao extends AppCompatActivity {
         }else {
 
             resultado = Math.pow(base, expoente);
-            resultadov.setText(String.valueOf(resultado));
+            resultadov.setText(String.format("%.3f", resultado));
 
             List<String> lista = new ArrayList<String>();
 
@@ -78,11 +90,14 @@ public class Potenciacao extends AppCompatActivity {
             for (double i = 1; i <= expoente; i++) {
 
                 if (expoente != 1 && base != 1) {
-                    lista.add(String.valueOf(base));
+                    lista.add(String.format("%.3f", base));
                 } else if (expoente == 1) {
-                    lista.add(String.valueOf(base));
+                    lista.add(String.format("%.3f", base));
                     lista.add("x 1");
                 } else if (base == 1) {
+                    lista.add(String.format("%.3f", base));
+                }
+                else if (expoente == 0) {
                     lista.add("1");
                 }
                 if (expoente != i) {

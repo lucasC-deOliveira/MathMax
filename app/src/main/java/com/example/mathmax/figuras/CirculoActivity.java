@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +22,9 @@ public class CirculoActivity extends AppCompatActivity implements FigurasPlanas{
 
     private static final double pi = 3.14;
 
-    private Button btnCalcular, btnCalcularComprimento;
+    private Button btnCalcular;
+
+    private ImageView btBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class CirculoActivity extends AppCompatActivity implements FigurasPlanas{
         passo1 = findViewById(R.id.txtViewPasso1);
         passo2 = findViewById(R.id.txtViewPasso2);
         btnCalcular = findViewById(R.id.btnCalcular);
+        btBack = findViewById(R.id.btBackCirculo);
 
     }
 
@@ -54,23 +58,30 @@ public class CirculoActivity extends AppCompatActivity implements FigurasPlanas{
 
         });
 
+        btBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
     }
 
     public void calculaArea() {
 
         raio = Double.parseDouble(valor1.getText().toString());
 
-        formula.setText("(" + raio + " x " + raio + ")" + " * " + pi);
+        formula.setText("(" + String.format("%.3f", raio) + " x " + String.format("%.3f", raio) + ")" + " x " + pi);
 
         raio1 = Math.pow(raio, 2);
 
-        passo1.setText(raio1 + " * " + pi);
+        passo1.setText(String.format("%.3f", raio1) + " x " + pi);
 
         resultado = raio1 * pi;
 
-        passo2.setText(String.valueOf(resultado));
+        passo2.setText(String.format("%.3f", resultado));
 
-        resultadov.setText(String.valueOf(resultado));
+        resultadov.setText(String.format("%.3f",resultado));
 
 
     }

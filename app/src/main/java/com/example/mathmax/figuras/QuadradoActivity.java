@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,8 @@ public class QuadradoActivity extends AppCompatActivity implements FigurasPlanas
 
     private Button btnCalcular;
 
+    private ImageView btBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +34,7 @@ public class QuadradoActivity extends AppCompatActivity implements FigurasPlanas
         formula = findViewById(R.id.txtViewFormula);
         passo1 = findViewById(R.id.txtViewPasso1);
         btnCalcular = findViewById(R.id.btnCalcular);
+        btBack = findViewById(R.id.btBackQuadrado);
 
     }
 
@@ -51,17 +55,24 @@ public class QuadradoActivity extends AppCompatActivity implements FigurasPlanas
 
         });
 
+        btBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
     }
 
     @Override
     public void calculaArea() {
         lado = Double.parseDouble(valor.getText().toString());
         resultado = Math.pow(lado, 2);
-        resultadov.setText(String.valueOf(resultado));
+        resultadov.setText(String.format("%.3f", resultado));
 
-        formula.setText(lado + " x " + lado);
+        formula.setText(String.format("%.3f", lado) + " x " + String.format("%.3f", lado));
 
-        passo1.setText(String.valueOf(resultado));
+        passo1.setText(String.format("%.3f", resultado));
     }
 
 

@@ -10,6 +10,8 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -21,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private Button actButton;
     private EditText editEmail, editPass;
+    private ImageView btBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,8 @@ public class LoginActivity extends AppCompatActivity {
 
         editEmail = findViewById(R.id.EditEmailLogin);
         editPass = findViewById(R.id.editPassLogin);
+
+        btBack = findViewById(R.id.btBackLogin);
 
     }
 
@@ -44,45 +49,45 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email = editEmail.getText().toString().trim();
                 String senha = editPass.getText().toString().trim();
-                if (!senha.isEmpty()||!email.isEmpty()){
+                if (!senha.equals("") && !email.equals("")){
                 MainActivity.usuario.signInWithEmailAndPassword(email,senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Snackbar snackbar = Snackbar.make(view,"Login Realizado! ",Snackbar.LENGTH_LONG);
-                            snackbar.setBackgroundTint(Color.WHITE);
-                            snackbar.setTextColor(Color.BLACK);
-                            snackbar.show();
+                            Toast.makeText(getApplicationContext(),"Seu login foi realizado com sucesso.",Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                             startActivity(intent);
-                        }
-                        else{
-                            Snackbar snackbar = Snackbar.make(view,"Login Não Realizado, verifique suas credenciais !",Snackbar.LENGTH_LONG);
-                            snackbar.setBackgroundTint(Color.WHITE);
-                            snackbar.setTextColor(Color.BLACK);
-                            snackbar.show();
+                        } else{
+                            Toast.makeText(getApplicationContext(),"Seu login não foi realizado, por favor, verifique suas credenciais.",Toast.LENGTH_LONG).show();
                         }
                     }
                 });
                 }
                 else {
-                    Snackbar snackbar = Snackbar.make(view,"Campos devem ser preenchidos ",Snackbar.LENGTH_LONG);
-                    snackbar.setBackgroundTint(Color.WHITE);
-                    snackbar.setTextColor(Color.BLACK);
-                    snackbar.show();
+                    Toast.makeText(getApplicationContext(),"Por favor, preencha os campos.",Toast.LENGTH_LONG).show();
                 }
             }
         });
 
+        btBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
     }
-
-
-
 
     private void goToApp(){
         Intent main = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(main);
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent back = new Intent(getApplicationContext(), LoginMenuActivity.class);
+        startActivity(back);
         finish();
     }
 }

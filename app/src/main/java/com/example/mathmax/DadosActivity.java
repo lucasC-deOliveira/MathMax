@@ -15,7 +15,7 @@ public class DadosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dados);
-        actButton = findViewById(R.id.button);
+        actButton = findViewById(R.id.btnDados);
 
 
 
